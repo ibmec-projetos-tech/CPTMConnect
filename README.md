@@ -1,6 +1,6 @@
 # CPTMConnect
 
-** CPTMConnect ** é uma aplicação web desenvolvida pelos estudantes do Ibmec-BH para melhorar a experiência dos usuários que utilizam o sistema de trens de São Paulo. O objetivo é otimizar a usabilidade do aplicativo atual, melhorando a interação do usuário com o sistema de transporte público e garantindo informações precisas em tempo real.
+- **CPTMConnect** é uma aplicação web desenvolvida pelos estudantes do Ibmec-BH para melhorar a experiência dos usuários que utilizam o sistema de trens de São Paulo. O objetivo é otimizar a usabilidade do aplicativo atual, melhorando a interação do usuário com o sistema de transporte público e garantindo informações precisas em tempo real.
 
 ## Descrição do Projeto
 
