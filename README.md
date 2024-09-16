@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# CPTMConnect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+** CPTMConnect** é uma aplicação web desenvolvida pelos estudantes do Ibmec-BH para melhorar a experiência dos usuários que utilizam o sistema de trens de São Paulo. O objetivo é otimizar a usabilidade do aplicativo atual, melhorando a interação do usuário com o sistema de transporte público e garantindo informações precisas em tempo real.
 
-## Available Scripts
+## Descrição do Projeto
 
-In the project directory, you can run:
+A aplicação visa oferecer uma plataforma mais acessível e intuitiva para a consulta de horários, rotas, e estações do metrô de São Paulo, com foco na inclusão de funcionalidades que melhorem a jornada do usuário desde a entrada até o desembarque no metrô.
 
-### `npm start`
+## Problema Resolvido
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O projeto resolve os seguintes problemas do sistema atual:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Difícil Visualização**: A atual estrutura do aplicativo é confusa, com muitas etapas e informações desnecessárias.
+- **Falta de Informações Atualizadas**: Os usuários enfrentam dificuldades em acessar informações atualizadas sobre o status das estações e horários de funcionamento.
+- **Acessibilidade Limitada**: Necessidade de melhorias na acessibilidade para pessoas com deficiência visual e auditiva.
 
-### `npm test`
+## Requisitos Funcionais
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Filtros de Busca**:
+   - Adicionar a possibilidade de filtrar baseado em características das estações, como acesso para deficientes.
+2. **Informações em Tempo Real**:
+   - Exibir status atualizado das estações e horários de funcionamento das linhas.
+3. **Atualização do Mapa com localização do usuário**:
+   - Recomendar caminhos e estações baseadas em CEP inseridos por usuários.
+4. **Mapas Interativos**:
+   - Incluir mapas interativos para exibir as rotas e linhas do metrô, com informações detalhadas sobre as estações.
 
-### `npm run build`
+## Testes Unitários
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Testes de Filtros de Busca**:
+  • Teste de Filtro por Acessibilidade:
+  • Verificar se o filtro retorna apenas estações com acessibilidade.
+  • Teste de Combinação de Filtros:
+  • Verificar se múltiplos filtros, como “acessibilidade” e “estacionamento”, funcionam corretamente.
+  • Teste de Filtros Não Correspondentes:
+  • Exibir mensagem “Nenhuma estação encontrada” se nenhum resultado atender aos filtros.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Testes de Informações em Tempo Real**:
+  • Teste de Atualização de Status:
+  • Verificar se o status da estação é atualizado automaticamente em tempo real.
+  • Teste de Atualização de Horários:
+  • Validar se os horários das linhas são atualizados sem recarregar a página.
+  • Teste de Erro de Atualização:
+  • Verificar se o sistema exibe mensagem de erro em caso de falha na atualização.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Teste de Atualização do Mapa com Localização do Usuário**:
+  - Verificar a inclusão de elementos de acessibilidade (tanto visuais quanto auditivos) em todas as interfaces.
+    • Teste de Recomendação por CEP:
+    • Verificar se a estação mais próxima é exibida corretamente com base no CEP fornecido.
+    • Teste de Rota Recomendada:
+    • Validar se a rota mais curta entre o CEP inserido e uma estação é exibida corretamente no mapa.
+    • Teste de CEP Inválido:
+    • Exibir mensagem de erro apropriada para CEP inválido.
+- **Teste de Mapas Interativos**:
+  • Teste de Exibição de Rotas:
+  • Verificar se o mapa desenha a rota correta entre a origem e o destino selecionados.
+  • Teste de Zoom e Navegação:
+  • Validar se o zoom e a navegação funcionam sem afetar a visualização das rotas.
+  • Teste de Detalhes da Estação:
+  • Verificar se, ao clicar em uma estação, as informações detalhadas são exibidas corretamente.
 
-### `npm run eject`
+## Base de Dados
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Será utilizada uma base de dados em JSON para armazenar informações sobre estações e linhas do metrô, como status, horários e acessibilidade. Um exemplo da estrutura de dados:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+{
+  "estacoes": [
+    {
+      "nome": "Estação Central",
+      "status": "Aberta",
+      "horario": "05:00 - 23:00",
+      "acessibilidade": true,
+      "tarifa": 4.5
+    },
+    {
+      "nome": "Estação Lagoinha",
+      "status": "Fechada",
+      "horario": "06:00 - 22:00",
+      "acessibilidade": false,
+      "tarifa": 4.5
+    }
+  ]
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## APIs Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Google Maps API**: Será utilizada para conseguir os dados geográficos da cidade de São Paulo.
 
-## Learn More
+- **OpenWeather API**: Exibir condições meteorológicas em tempo real para os usuários. Pode ser especialmente útil para informar sobre o clima em determinadas estações ou áreas, ajudando os usuários a planejar melhor suas viagens.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Tembici API**: Para a integração com sistemas de pagamento eletrônico e recarga de bilhetes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Lista de Tarefas e Responsabilidades
 
-### Code Splitting
+- **Lucas Pereira**:
+  - Gerenciamento do banco de dados.
+- **Emanuel Gandra**:
+  - Desenvolvimento do back-end e integração com APIs externas.
+- **Diogo Biscoto**:
+  - Testes Unitários.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Convenções de Nomenclatura
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Branches**: Usar o formato `integrante/nome-da-funcionalidade` ou `integrante/bugfix/descricao-do-problema`. Exemplo: `feature/filtro-buscas`.
+- **Pull Requests**:Cada PR deve conter uma descrição objetiva e das alterações realizadas. Formato do título: ` Resumo da Funcionalidade, Funcionalidade`. Exemplo: `Implementação de Filtros de Acessibilidade, Filtros de Busca`.

@@ -14,7 +14,7 @@ import youtube from './youtube.png';
 import logo2 from './cptm_logo.png';
 import menu_hamburguer from './menu_hamburguer.png';
 
-function Block() {
+function NavMenu() {
 
     function menu() {
         if (document.getElementById('itens').style.display === 'block') {
@@ -83,7 +83,16 @@ function Block() {
     );
 
 }
-export default Block;
+export default NavMenu;
+
+
+
+
+
+
+
+
+
 
 // function Block() {
 //     const [display, setDisplay] = React.useState('none');
