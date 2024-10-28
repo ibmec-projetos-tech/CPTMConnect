@@ -7,6 +7,7 @@ import Busca from './Busca';
 import Anuncio from './Anuncio';
 import Footer from './Footer';
 import NavMenu from './NavMenu';
+import Mapa from './Mapa';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <Carrosel />
     <Busca />
     <Anuncio />
+    <Mapa />
     <Footer />
   </React.StrictMode>
 );
