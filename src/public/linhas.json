@@ -1,0 +1,42 @@
+[
+    {
+        "linha": "Linha 1",
+        "estacoes": [
+            { "nome": "Estação Central", "acessibilidade": true },
+            { "nome": "Estação Norte", "acessibilidade": false },
+            { "nome": "Estação Sul", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha 2",
+        "estacoes": [
+            { "nome": "Estação Leste", "acessibilidade": true },
+            { "nome": "Estação Oeste", "acessibilidade": false },
+            { "nome": "Estação Central", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha 3",
+        "estacoes": [
+            { "nome": "Estação Norte", "acessibilidade": false },
+            { "nome": "Estação Leste", "acessibilidade": true },
+            { "nome": "Estação Sudeste", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha 4",
+        "estacoes": [
+            { "nome": "Estação Oeste", "acessibilidade": false },
+            { "nome": "Estação Sudeste", "acessibilidade": true },
+            { "nome": "Estação Central", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha 5",
+        "estacoes": [
+            { "nome": "Estação Norte", "acessibilidade": false },
+            { "nome": "Estação Oeste", "acessibilidade": false },
+            { "nome": "Estação Sudeste", "acessibilidade": true }
+        ]
+    }
+]
