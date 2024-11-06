@@ -1,0 +1,69 @@
+[
+    {
+        "linha": "Linha A - Amarela",
+        "estacoes": [
+            { "nome": "Central Park", "acessibilidade": true },
+            { "nome": "Nova Esperança", "acessibilidade": false },
+            { "nome": "Sol Nascente", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha B - Verde",
+        "estacoes": [
+            { "nome": "Jardim Imperial", "acessibilidade": true },
+            { "nome": "Santa Luzia", "acessibilidade": false },
+            { "nome": "Campo Belo", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha C - Vermelha",
+        "estacoes": [
+            { "nome": "Lago Azul", "acessibilidade": true },
+            { "nome": "Estação Praia", "acessibilidade": true },
+            { "nome": "Estação Central", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha D - Azul",
+        "estacoes": [
+            { "nome": "Sol Nascente", "acessibilidade": true },
+            { "nome": "Bosque Encantado", "acessibilidade": false }
+        ]
+    },
+    {
+        "linha": "Linha E - Lilás",
+        "estacoes": [
+            { "nome": "Parque Verde", "acessibilidade": true },
+            { "nome": "Campo Belo", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha F - Rubi",
+        "estacoes": [
+            { "nome": "Sol Nascente", "acessibilidade": true },
+            { "nome": "Montanha Azul", "acessibilidade": false }
+        ]
+    },
+    {
+        "linha": "Linha G - Diamante",
+        "estacoes": [
+            { "nome": "Estação Aurora", "acessibilidade": true },
+            { "nome": "Campo Real", "acessibilidade": false },
+            { "nome": "Cidade Nova", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha H - Esmeralda",
+        "estacoes": [
+            { "nome": "Cidade Nova", "acessibilidade": true },
+            { "nome": "Lago Norte", "acessibilidade": true }
+        ]
+    },
+    {
+        "linha": "Linha I - Turquesa",
+        "estacoes": [
+            { "nome": "Estação Central", "acessibilidade": true },
+            { "nome": "Serra Dourada", "acessibilidade": false }
+        ]
+    }
+]
