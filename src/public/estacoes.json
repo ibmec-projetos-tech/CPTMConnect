@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "linha": "Linha 1 - Azul",
+        "estacaoPartida": "Jabaquara",
+        "estacaoDestino": "Tucuruvi",
+        "horarioPartida": "05:00",
+        "horarioChegada": "23:59",
+        "tarifa": 4.40,
+        "intervalo": "4 min",
+        "status": "Operacional",
+        "capacidade": 1000
+    },
+    {
+        "id": 2,
+        "linha": "Linha 2 - Verde",
+        "estacaoPartida": "Vila Prudente",
+        "estacaoDestino": "Vila Madalena",
+        "horarioPartida": "05:00",
+        "horarioChegada": "23:59",
+        "tarifa": 4.40,
+        "intervalo": "5 min",
+        "status": "Operacional",
+        "capacidade": 950
+    },
+    {
+        "id": 3,
+        "linha": "Linha 3 - Vermelha",
+        "estacaoPartida": "Corinthians-Itaquera",
+        "estacaoDestino": "Palmeiras-Barra Funda",
+        "horarioPartida": "04:40",
+        "horarioChegada": "00:10",
+        "tarifa": 4.40,
+        "intervalo": "3 min",
+        "status": "Operacional",
+        "capacidade": 1200
+    },
+    {
+        "id": 4,
+        "linha": "Linha 4 - Amarela",
+        "estacaoPartida": "Luz",
+        "estacaoDestino": "São Paulo-Morumbi",
+        "horarioPartida": "04:40",
+        "horarioChegada": "00:00",
+        "tarifa": 4.40,
+        "intervalo": "3 min",
+        "status": "Operacional",
+        "capacidade": 800
+    },
+    {
+        "id": 5,
+        "linha": "Linha 5 - Lilás",
+        "estacaoPartida": "Capão Redondo",
+        "estacaoDestino": "Chácara Klabin",
+        "horarioPartida": "04:40",
+        "horarioChegada": "00:00",
+        "tarifa": 4.40,
+        "intervalo": "6 min",
+        "status": "Operacional",
+        "capacidade": 700
+    },
+    {
+        "id": 6,
+        "linha": "Linha 7 - Rubi",
+        "estacaoPartida": "Luz",
+        "estacaoDestino": "Francisco Morato",
+        "horarioPartida": "04:00",
+        "horarioChegada": "23:00",
+        "tarifa": 4.40,
+        "intervalo": "10 min",
+        "status": "Operacional",
+        "capacidade": 1200
+    },
+    {
+        "id": 7,
+        "linha": "Linha 8 - Diamante",
+        "estacaoPartida": "Júlio Prestes",
+        "estacaoDestino": "Amador Bueno",
+        "horarioPartida": "04:00",
+        "horarioChegada": "23:00",
+        "tarifa": 4.40,
+        "intervalo": "10 min",
+        "status": "Operacional",
+        "capacidade": 1000
+    },
+    {
+        "id": 8,
+        "linha": "Linha 9 - Esmeralda",
+        "estacaoPartida": "Osasco",
+        "estacaoDestino": "Grajaú",
+        "horarioPartida": "04:00",
+        "horarioChegada": "23:30",
+        "tarifa": 4.40,
+        "intervalo": "6 min",
+        "status": "Operacional",
+        "capacidade": 950
+    },
+    {
+        "id": 9,
+        "linha": "Linha 10 - Turquesa",
+        "estacaoPartida": "Brás",
+        "estacaoDestino": "Rio Grande da Serra",
+        "horarioPartida": "04:00",
+        "horarioChegada": "23:30",
+        "tarifa": 4.40,
+        "intervalo": "8 min",
+        "status": "Operacional",
+        "capacidade": 800
+    },
+    {
+        "id": 10,
+        "linha": "Linha 15 - Prata",
+        "estacaoPartida": "Vila Prudente",
+        "estacaoDestino": "Jardim Colonial",
+        "horarioPartida": "04:40",
+        "horarioChegada": "00:00",
+        "tarifa": 4.40,
+        "intervalo": "5 min",
+        "status": "Operacional",
+        "capacidade": 700
+    }
+]
