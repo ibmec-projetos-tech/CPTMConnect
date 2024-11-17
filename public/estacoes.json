@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "nome": "Central Park",
+        "endereco": "Rua das Flores, 123 - Centro, Rio de Janeiro - RJ",
+        "linhas": ["Linha A - Amarela"],
+        "acessibilidade": true
+    },
+    {
+        "id": 2,
+        "nome": "Nova Esperança",
+        "endereco": "Av. Liberdade, 450 - Vila Nova, Rio de Janeiro - RJ",
+        "linhas": ["Linha A - Amarela"],
+        "acessibilidade": false
+    },
+    {
+        "id": 3,
+        "nome": "Jardim Imperial",
+        "endereco": "Rua das Palmeiras, 890 - Jardim Imperial, Rio de Janeiro - RJ",
+        "linhas": ["Linha B - Verde", "Linha G - Prata"],
+        "acessibilidade": true
+    },
+    {
+        "id": 4,
+        "nome": "Santa Luzia",
+        "endereco": "Av. Primavera, 789 - Santa Luzia, Rio de Janeiro - RJ",
+        "linhas": ["Linha B - Verde"],
+        "acessibilidade": false
+    },
+    {
+        "id": 5,
+        "nome": "Lago Azul",
+        "endereco": "Praça do Lago, 75 - Centro, Rio de Janeiro - RJ",
+        "linhas": ["Linha C - Vermelha"],
+        "acessibilidade": true
+    },
+    {
+        "id": 6,
+        "nome": "Estação Praia",
+        "endereco": "Rua Oceânica, 332 - Praia Grande, Rio de Janeiro - RJ",
+        "linhas": ["Linha C - Vermelha"],
+        "acessibilidade": true
+    },
+    {
+        "id": 7,
+        "nome": "Sol Nascente",
+        "endereco": "Alameda das Estrelas, 5 - Sol Nascente, Rio de Janeiro - RJ",
+        "linhas": ["Linha A - Amarela", "Linha D - Azul", "Linha F - Rubi"],
+        "acessibilidade": true
+    },
+    {
+        "id": 8,
+        "nome": "Bosque Encantado",
+        "endereco": "Av. Verdejante, 999 - Bosque, Rio de Janeiro - RJ",
+        "linhas": ["Linha D - Azul"],
+        "acessibilidade": false
+    },
+    {
+        "id": 9,
+        "nome": "Parque Verde",
+        "endereco": "Rua das Árvores, 567 - Parque Verde, Rio de Janeiro - RJ",
+        "linhas": ["Linha E - Lilás"],
+        "acessibilidade": true
+    },
+    {
+        "id": 10,
+        "nome": "Campo Belo",
+        "endereco": "Av. Campos Elíseos, 350 - Campo Belo, Rio de Janeiro - RJ",
+        "linhas": ["Linha B - Verde", "Linha E - Lilás"],
+        "acessibilidade": true
+    },
+    {
+        "id": 11,
+        "nome": "Montanha Azul",
+        "endereco": "Estrada das Montanhas, 123 - Montanha Azul, Rio de Janeiro - RJ",
+        "linhas": ["Linha F - Rubi"],
+        "acessibilidade": false
+    },
+    {
+        "id": 12,
+        "nome": "Estação Aurora",
+        "endereco": "Praça das Luzes, 100 - Aurora, Rio de Janeiro - RJ",
+        "linhas": ["Linha G - Diamante"],
+        "acessibilidade": true
+    },
+    {
+        "id": 13,
+        "nome": "Campo Real",
+        "endereco": "Av. Central, 400 - Campo Real, Rio de Janeiro - RJ",
+        "linhas": ["Linha G - Diamante"],
+        "acessibilidade": false
+    },
+    {
+        "id": 14,
+        "nome": "Cidade Nova",
+        "endereco": "Rua Principal, 1500 - Centro, Rio de Janeiro - RJ",
+        "linhas": ["Linha G - Diamante", "Linha H - Esmeralda"],
+        "acessibilidade": true
+    },
+    {
+        "id": 15,
+        "nome": "Lago Norte",
+        "endereco": "Av. Litorânea, 50 - Lago Norte, Rio de Janeiro - RJ",
+        "linhas": ["Linha H - Esmeralda"],
+        "acessibilidade": true
+    },
+    {
+        "id": 16,
+        "nome": "Estação Central",
+        "endereco": "Av. das Nações, S/N - Centro, Rio de Janeiro - RJ",
+        "linhas": ["Linha C - Vermelha", "Linha I - Turquesa"],
+        "acessibilidade": true
+    },
+    {
+        "id": 17,
+        "nome": "Serra Dourada",
+        "endereco": "Praça das Montanhas, S/N - Serra Dourada, Rio de Janeiro - RJ",
+        "linhas": ["Linha I - Turquesa"],
+        "acessibilidade": false
+    },
+    {
+        "id": 18,
+        "nome": "Vila Imperial",
+        "endereco": "Rua das Rosas, 888 - Vila Imperial, Rio de Janeiro - RJ",
+        "linhas": ["Linha G - Prata"],
+        "acessibilidade": true
+    }
+]

@@ -1,102 +1,88 @@
+// Busca.js
 import './Busca.css';
-import React, { useState } from 'react';
-import './Busca.css';
+import React, { useState, useEffect } from 'react';
 
 function Busca() {
     const [mode, setMode] = useState('Sim');
+    const [lines, setLines] = useState([]);
+    const [stations, setStations] = useState([]);
+    const [selectedLine, setSelectedLine] = useState('');
+    const [startStation, setStartStation] = useState('');
+    const [endStation, setEndStation] = useState('');
+    const [availableLines, setAvailableLines] = useState([]);
 
     const handleModeChange = () => {
         setMode(mode === 'Sim' ? 'Não' : 'Sim');
     };
 
+    // Carregar todas as linhas da API
+    useEffect(() => {
+        fetch('http://localhost:5001/api/lines')
+            .then(response => response.json())
+            .then(data => setLines(data))
+            .catch(error => console.error('Error:', error));
+    }, []);
+
+    // Carregar estações com base na acessibilidade
+    useEffect(() => {
+        const acessibilidade = mode === 'Sim';
+
+        fetch(`http://localhost:5001/api/stations?acessibilidade=${acessibilidade}`)
+            .then(response => response.json())
+            .then(data => setStations(data))
+            .catch(error => console.error('Error:', error));
+    }, [mode]);
+
+    // Atualizar linhas disponíveis com base na estação de destino selecionada
+    useEffect(() => {
+        if (!endStation) {
+            // Se nenhuma estação de destino estiver selecionada, limpa as linhas disponíveis
+            return setAvailableLines([]);
+        }
+
+        // Filtra as linhas que contêm a estação de destino selecionada
+        const filteredLines = lines.filter(line =>
+            line.estacoes.some(station => station.nome === endStation && (mode === 'Não' || station.acessibilidade))
+        );
+        setAvailableLines(filteredLines);
+    }, [endStation, lines, mode]);
+
     return (
         <div className="Busca">
-            <div className='title'>
-            PARA ONDE VOCÊ VAI?
-            </div>
+            <div className="title">PARA ONDE VOCÊ VAI?</div>
             <div className="Search">
                 <div className="Opcoes">
-                    <select className="Opc">
-                        <option value="option1">Aeroporto</option>
-                        <option value="option2">Agua Branca</option>
-                        <option value="option3">Antonio Gianetti Neto</option>
-                        <option value="option4">Aracaré</option>
-                        <option value="option5">Baltazar Fidelis</option>
-                        <option value="option6">Botujuru</option>
-                        <option value="option7">Bras</option>
-                        <option value="option8">Braz Cubas</option>
-                        <option value="option9">Caideiras</option>
-                        <option value="option10">Calmon Viana</option>
+                    {/* Seleção de estação de partida */}
+                    <select className="Opc" onChange={(e) => setSelectedLine(e.target.value)} value={selectedLine}>
+                        <option value="">Selecione a estação de partida</option>
+                        {stations.map((station, index) => (
+                            <option key={index} value={station.nome}>
+                                {station.nome}
+                            </option>
+                        ))}
                     </select>
-                    <select className="Opc1">
-                    <option value="option1">Aeroporto</option>
-                        <option value="option2">Agua Branca</option>
-                        <option value="option3">Antonio Gianetti Neto</option>
-                        <option value="option4">Aracaré</option>
-                        <option value="option5">Baltazar Fidelis</option>
-                        <option value="option6">Botujuru</option>
-                        <option value="option7">Bras</option>
-                        <option value="option8">Braz Cubas</option>
-                        <option value="option9">Caideiras</option>
-                        <option value="option10">Calmon Viana</option>
+
+                    {/* Seleção da estação de destino */}
+                    <select className="Opc1" onChange={(e) => setStartStation(e.target.value)} value={startStation}>
+                        <option value="">Selecione a estação de destino</option>
+                        {stations.map((station, index) => (
+                            <option key={index} value={station.nome}>
+                                {station.nome}
+                            </option>
+                        ))}
                     </select>
-                    <div className='pai_texto_swift'>
-                    <p className='texto'>Estaçoes com acessibilidade</p>
-                    <button className="SwiftButton" onClick={handleModeChange}>
-                        {mode}
-                    </button>
+
+                    {/* Botão para alternar acessibilidade */}
+                    <div className="pai_texto_swift">
+                        <p className="texto">Estações com acessibilidade</p>
+                        <button className="SwiftButton" onClick={handleModeChange}>
+                            {mode}
+                        </button>
                     </div>
                 </div>
             </div>
-            <button className="Botao">PESQUISAR</button>
         </div>
     );
 }
 
 export default Busca;
-// function Busca() {
-//     return (
-//         <div className="Busca">
-//             <h2 className = 'Title'>PARA ONDE VOCÊ VAI?</h2>
-//             <div className = 'Search'>
-//                 <div className='Opcoes'>
-//                     <select className = 'Opc'>
-//                         <option value="option1">Morumbi</option>
-//                         <option value="option2">Guarulhos</option>
-//                     </select>
-//                     <select className = 'Opc1'>
-//                         <option value="option1">Oregon</option>
-//                         <option value="option2">Bh</option>
-//                     </select>
-//                 </div>
-//             </div>
-//             <button className='Botao'>PESQUISAR</button>
-//         </div>
-//     );
-// }
-// export default Busca;
-
-{/* <h1 style={{ textAlign: 'center' }}>Para onde você vai?</h1>
-<div style={{ display: 'flex', justifyContent: 'center' }}>
-    <div style={{ width: '70%', display: 'flex', flexDirection: 'column' }}>
-        <select style={{ width: '100%', height: '40%', borderRadius: '5px', marginBottom: '10px' }}>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-        </select>
-        <select style={{ width: '100%', height: '40%', borderRadius: '5px' }}>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-        </select>
-    </div>
-</div>
-<button style={{ display: 'block', margin: '0 auto', marginTop: '10px' }}>Buscar</button> */}
-// export default Busca;
-//         <input type="text" id="input" placeholder="De"/>
-//         <br/>
-//         <input type="text" id="input" placeholder="Para"/>
-//         <br/>
-//         <button id="button">Buscar</button>
-//     </div>
-//     );
-//   }
-//   export default Busca;
