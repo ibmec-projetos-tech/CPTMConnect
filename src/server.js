@@ -10,14 +10,16 @@ app.use(express.static('public'));
 
 // Função para obter todas as estações
 app.get('/api/stations', (req, res) => {
+    const accessibility = req.query.acessibilidade === 'true';
+
     fs.readFile('./public/estacoes.json', (err, data) => {
         if (err) {
-            return res.status(500).send("Erro ao carregar estações");
+            res.status(500).send("Erro ao carregar estações");
+            return;
         }
 
         let stations = JSON.parse(data);
-        const accessibility = req.query.acessibilidade === 'true';
-
+        
         // Filtrar por acessibilidade, se especificado
         if (req.query.acessibilidade) {
             stations = stations.filter(station => station.acessibilidade === accessibility);
@@ -29,15 +31,17 @@ app.get('/api/stations', (req, res) => {
 
 // Função para obter todas as linhas ou filtrar linhas que passam por uma estação específica e acessibilidade
 app.get('/api/lines', (req, res) => {
+    const accessibility = req.query.acessibilidade === 'true';
+    const destination = req.query.estacaoDestino;
+
     fs.readFile('./public/linhas.json', (err, data) => {
         if (err) {
-            return res.status(500).send("Erro ao carregar linhas");
+            res.status(500).send("Erro ao carregar linhas");
+            return;
         }
 
         let lines = JSON.parse(data);
-        const accessibility = req.query.acessibilidade === 'true';
-        const destination = req.query.estacaoDestino;
-
+        
         // Filtrar linhas por acessibilidade, se especificado
         if (req.query.acessibilidade) {
             lines = lines.filter(line => 
