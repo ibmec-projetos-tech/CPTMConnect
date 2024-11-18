@@ -1,6 +1,6 @@
 # CPTMConnect
 
-** CPTMConnect** é uma aplicação web desenvolvida pelos estudantes do Ibmec-BH para melhorar a experiência dos usuários que utilizam o sistema de trens de São Paulo. O objetivo é otimizar a usabilidade do aplicativo atual, melhorando a interação do usuário com o sistema de transporte público e garantindo informações precisas em tempo real.
+- **CPTMConnect** é uma aplicação web desenvolvida pelos estudantes do Ibmec-BH para melhorar a experiência dos usuários que utilizam o sistema de trens de São Paulo. O objetivo é otimizar a usabilidade do aplicativo atual, melhorando a interação do usuário com o sistema de transporte público e garantindo informações precisas em tempo real.
 
 ## Descrição do Projeto
 
@@ -69,14 +69,16 @@ Será utilizada uma base de dados em JSON para armazenar informações sobre est
     {
       "nome": "Estação Central",
       "status": "Aberta",
-      "horario": "05:00 - 23:00",
+      "horario-abertura": "05:00",
+      "horario-fechamento": "23:00"
       "acessibilidade": true,
       "tarifa": 4.5
     },
     {
       "nome": "Estação Lagoinha",
       "status": "Fechada",
-      "horario": "06:00 - 22:00",
+      "horario-abertura": "06:00",
+      "horario-fechamento":"22:00"
       "acessibilidade": false,
       "tarifa": 4.5
     }
@@ -90,7 +92,7 @@ Será utilizada uma base de dados em JSON para armazenar informações sobre est
 
 - **OpenWeather API**: Exibir condições meteorológicas em tempo real para os usuários. Pode ser especialmente útil para informar sobre o clima em determinadas estações ou áreas, ajudando os usuários a planejar melhor suas viagens.
 
-- **Tembici API**: Para a integração com sistemas de pagamento eletrônico e recarga de bilhetes.
+- **Tembici API**: Para melhrar a analise de estações e entender quais tem points de bicicletas perto.
 
 ## Lista de Tarefas e Responsabilidades
 
