@@ -89,7 +89,7 @@ function Mapa() {
             />
             <button className = 'Butao' onClick={handleSearchLocation}>Pesquisar</button>
             </div>
-            <LoadScript googleMapsApiKey="AIzaSyAh2QVjH1KNLVKPul7QQ7_hopR4fRO-Bww"> {/* Substitua pela sua chave API */}
+            <LoadScript googleMapsApiKey="AIzaSyAh2QVjH1KNLVKPul7QQ7_hopR4fRO-Bww"> 
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={userLocation}
@@ -102,7 +102,8 @@ function Mapa() {
                     {destinationLocation && (
                         <Marker position={destinationLocation} />
                     )}
-                    {stationAddresses.map((station) => (
+                    {destinationLocation &&
+                    stationAddresses.map((station) => (
                         <Marker
                             key={station.id}
                             position={station.coordinates}
