@@ -60,7 +60,7 @@ function Busca() {
             <div className="Search">
                 <div className="Opcoes">
                     {/* Seleção de linha, mostra apenas as linhas filtradas */}
-                    <select className="Opc" onChange={(e) => setSelectedLine(e.target.value)} value={selectedLine}>
+                    <select data-cy="start-station" className="Opc" onChange={(e) => setSelectedLine(e.target.value)} value={selectedLine}>
                         <option value="">Selecione a estação de partida</option>
                         {stations.map((station, index) => (
                             <option key={index} value={station.nome}>
@@ -70,7 +70,7 @@ function Busca() {
                     </select>
 
                     {/* Seleção da estação de partida */}
-                    <select className="Opc1" onChange={(e) => setStartStation(e.target.value)} value={startStation}>
+                    <select data-cy="end-station" className="Opc1" onChange={(e) => setStartStation(e.target.value)} value={startStation}>
                         <option value="">Selecione a estação de destino</option>
                         {stations.map((station, index) => (
                             <option key={index} value={station.nome}>
@@ -83,7 +83,7 @@ function Busca() {
                     {/* Botão para alternar acessibilidade */}
                     <div className='pai_texto_swift'>
                         <p className='texto'>Estações com acessibilidade</p>
-                        <button className="SwiftButton" onClick={handleModeChange}>
+                        <button data-cy="toggle-acessibilidade" className="SwiftButton" onClick={handleModeChange}>
                             {mode}
                         </button>
                     </div>
