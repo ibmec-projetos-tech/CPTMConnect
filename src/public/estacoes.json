@@ -1,122 +1,128 @@
 [
     {
         "id": 1,
-        "linha": "Linha 1 - Azul",
-        "estacaoPartida": "Jabaquara",
-        "estacaoDestino": "Tucuruvi",
-        "horarioPartida": "05:00",
-        "horarioChegada": "23:59",
-        "tarifa": 4.40,
-        "intervalo": "4 min",
-        "status": "Operacional",
-        "capacidade": 1000
+        "nome": "Jabaquara",
+        "endereco": "Av. Eng. Armando de Arruda Pereira, 2324 - Jabaquara, São Paulo - SP",
+        "linhas": ["Linha 1 - Azul"],
+        "acessibilidade": true
     },
     {
         "id": 2,
-        "linha": "Linha 2 - Verde",
-        "estacaoPartida": "Vila Prudente",
-        "estacaoDestino": "Vila Madalena",
-        "horarioPartida": "05:00",
-        "horarioChegada": "23:59",
-        "tarifa": 4.40,
-        "intervalo": "5 min",
-        "status": "Operacional",
-        "capacidade": 950
+        "nome": "Tucuruvi",
+        "endereco": "Av. Dr. Antônio Maria Laet, 1000 - Tucuruvi, São Paulo - SP",
+        "linhas": ["Linha 1 - Azul"],
+        "acessibilidade": false
     },
     {
         "id": 3,
-        "linha": "Linha 3 - Vermelha",
-        "estacaoPartida": "Corinthians-Itaquera",
-        "estacaoDestino": "Palmeiras-Barra Funda",
-        "horarioPartida": "04:40",
-        "horarioChegada": "00:10",
-        "tarifa": 4.40,
-        "intervalo": "3 min",
-        "status": "Operacional",
-        "capacidade": 1200
+        "nome": "Vila Prudente",
+        "endereco": "Av. Anhaia Mello, 1359 - Vila Prudente, São Paulo - SP",
+        "linhas": ["Linha 2 - Verde", "Linha 15 - Prata"],
+        "acessibilidade": true
     },
     {
         "id": 4,
-        "linha": "Linha 4 - Amarela",
-        "estacaoPartida": "Luz",
-        "estacaoDestino": "São Paulo-Morumbi",
-        "horarioPartida": "04:40",
-        "horarioChegada": "00:00",
-        "tarifa": 4.40,
-        "intervalo": "3 min",
-        "status": "Operacional",
-        "capacidade": 800
+        "nome": "Vila Madalena",
+        "endereco": "R. Heitor Penteado, 1258 - Sumarezinho, São Paulo - SP",
+        "linhas": ["Linha 2 - Verde"],
+        "acessibilidade": false
     },
     {
         "id": 5,
-        "linha": "Linha 5 - Lilás",
-        "estacaoPartida": "Capão Redondo",
-        "estacaoDestino": "Chácara Klabin",
-        "horarioPartida": "04:40",
-        "horarioChegada": "00:00",
-        "tarifa": 4.40,
-        "intervalo": "6 min",
-        "status": "Operacional",
-        "capacidade": 700
+        "nome": "Corinthians-Itaquera",
+        "endereco": "Av. Projetada, S/N - Itaquera, São Paulo - SP",
+        "linhas": ["Linha 3 - Vermelha"],
+        "acessibilidade": true
     },
     {
         "id": 6,
-        "linha": "Linha 7 - Rubi",
-        "estacaoPartida": "Luz",
-        "estacaoDestino": "Francisco Morato",
-        "horarioPartida": "04:00",
-        "horarioChegada": "23:00",
-        "tarifa": 4.40,
-        "intervalo": "10 min",
-        "status": "Operacional",
-        "capacidade": 1200
+        "nome": "Palmeiras-Barra Funda",
+        "endereco": "R. Dr. Abrahão Ribeiro, 740 - Barra Funda, São Paulo - SP",
+        "linhas": ["Linha 3 - Vermelha"],
+        "acessibilidade": true
     },
     {
         "id": 7,
-        "linha": "Linha 8 - Diamante",
-        "estacaoPartida": "Júlio Prestes",
-        "estacaoDestino": "Amador Bueno",
-        "horarioPartida": "04:00",
-        "horarioChegada": "23:00",
-        "tarifa": 4.40,
-        "intervalo": "10 min",
-        "status": "Operacional",
-        "capacidade": 1000
+        "nome": "Luz",
+        "endereco": "Praça da Luz, 1 - Luz, São Paulo - SP",
+        "linhas": ["Linha 1 - Azul", "Linha 4 - Amarela", "Linha 7 - Rubi"],
+        "acessibilidade": true
     },
     {
         "id": 8,
-        "linha": "Linha 9 - Esmeralda",
-        "estacaoPartida": "Osasco",
-        "estacaoDestino": "Grajaú",
-        "horarioPartida": "04:00",
-        "horarioChegada": "23:30",
-        "tarifa": 4.40,
-        "intervalo": "6 min",
-        "status": "Operacional",
-        "capacidade": 950
+        "nome": "São Paulo-Morumbi",
+        "endereco": "Av. Prof. Francisco Morato, 2355 - Caxingui, São Paulo - SP",
+        "linhas": ["Linha 4 - Amarela"],
+        "acessibilidade": false
     },
     {
         "id": 9,
-        "linha": "Linha 10 - Turquesa",
-        "estacaoPartida": "Brás",
-        "estacaoDestino": "Rio Grande da Serra",
-        "horarioPartida": "04:00",
-        "horarioChegada": "23:30",
-        "tarifa": 4.40,
-        "intervalo": "8 min",
-        "status": "Operacional",
-        "capacidade": 800
+        "nome": "Capão Redondo",
+        "endereco": "Estr. de Itapecerica, 3717 - Capão Redondo, São Paulo - SP",
+        "linhas": ["Linha 5 - Lilás"],
+        "acessibilidade": true
     },
     {
         "id": 10,
-        "linha": "Linha 15 - Prata",
-        "estacaoPartida": "Vila Prudente",
-        "estacaoDestino": "Jardim Colonial",
-        "horarioPartida": "04:40",
-        "horarioChegada": "00:00",
-        "tarifa": 4.40,
-        "intervalo": "5 min",
-        "status": "Operacional",
-        "capacidade": 700
+        "nome": "Chácara Klabin",
+        "endereco": "Rua Vergueiro, 5048 - Chácara Klabin, São Paulo - SP",
+        "linhas": ["Linha 2 - Verde", "Linha 5 - Lilás"],
+        "acessibilidade": true
+    },
+    {
+        "id": 11,
+        "nome": "Francisco Morato",
+        "endereco": "Rua Prof. Virgílio de Resende, 175 - Francisco Morato, São Paulo - SP",
+        "linhas": ["Linha 7 - Rubi"],
+        "acessibilidade": false
+    },
+    {
+        "id": 12,
+        "nome": "Júlio Prestes",
+        "endereco": "Praça Júlio Prestes, 16 - Santa Cecília, São Paulo - SP",
+        "linhas": ["Linha 8 - Diamante"],
+        "acessibilidade": true
+    },
+    {
+        "id": 13,
+        "nome": "Amador Bueno",
+        "endereco": "Estrada de Caucaia do Alto, 120 - Amador Bueno, São Paulo - SP",
+        "linhas": ["Linha 8 - Diamante"],
+        "acessibilidade": false
+    },
+    {
+        "id": 14,
+        "nome": "Osasco",
+        "endereco": "Av. Autonomistas, 1543 - Centro, Osasco - SP",
+        "linhas": ["Linha 8 - Diamante", "Linha 9 - Esmeralda"],
+        "acessibilidade": true
+    },
+    {
+        "id": 15,
+        "nome": "Grajaú",
+        "endereco": "Rua Giovanni Bononcini, 77 - Grajaú, São Paulo - SP",
+        "linhas": ["Linha 9 - Esmeralda"],
+        "acessibilidade": true
+    },
+    {
+        "id": 16,
+        "nome": "Brás",
+        "endereco": "Av. Rangel Pestana, S/N - Brás, São Paulo - SP",
+        "linhas": ["Linha 3 - Vermelha", "Linha 10 - Turquesa"],
+        "acessibilidade": true
+    },
+    {
+        "id": 17,
+        "nome": "Rio Grande da Serra",
+        "endereco": "Praça Fábio Marcondes, S/N - Rio Grande da Serra, São Paulo - SP",
+        "linhas": ["Linha 10 - Turquesa"],
+        "acessibilidade": false
+    },
+    {
+        "id": 18,
+        "nome": "Jardim Colonial",
+        "endereco": "Av. Ragueb Chohfi, 1400 - Jardim Colonial, São Paulo - SP",
+        "linhas": ["Linha 15 - Prata"],
+        "acessibilidade": true
     }
 ]
